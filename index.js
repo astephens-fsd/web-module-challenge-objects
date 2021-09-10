@@ -19,6 +19,8 @@ function createMenuItem(name, price, category){
     return {name, price, category};
 }
 
+console.log(createMenuItem('tacos', 8, 'lunch'));
+
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Invoke your function!
 Test your createMenuItems function by doing the following:
@@ -57,7 +59,17 @@ const burger = {
   price: 18, 
   category: "Lunch", 
   
+  discount: function(person){
+    const type = [];
+    if(person === 'teacher' || person === 'student'){
+    return this.price - (this.price * 0.25);
+  } else if(person === 'public'){
+    return this.price - (this.price * 0.10);
+    }
+  }
 }
+
+console.log(burger.discount('student'));
 
 
 
